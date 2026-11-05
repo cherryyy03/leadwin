@@ -449,22 +449,6 @@ body.edit-mode .ph.is-uploaded > .ph-tools .ph-del { display: inline-flex; }
 .statement-steps small { display: block; font-family: var(--font); font-size: 13px; font-weight: 600; letter-spacing: .1em; color: var(--muted); }
 
 /* ==========================================================================
-   Partners (공식 승인 파트너)
-   ========================================================================== */
-.partners { position: relative; padding: clamp(100px, 12vw, 150px) 0; background: radial-gradient(900px 400px at 50% 0%, rgba(212, 180, 124, .1), transparent 70%), #10131c; color: rgba(255, 255, 255, .6); text-align: center; }
-.partners-head h2 { margin-top: 22px; font-size: clamp(26px, 2.8vw, 38px); font-weight: 700; letter-spacing: -.035em; color: #fff; }
-.partners-head h2 b { font-weight: 800; background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.partners-head h2 span { color: var(--gold-2); font-weight: 300; margin: 0 10px; }
-.partner-grid { margin-top: 70px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
-.laurel { position: relative; width: 250px; height: 175px; margin: 0 auto; display: grid; place-items: center; background: url("laurel.svg") center / contain no-repeat; }
-.partner-logo { width: 126px; height: 126px; margin-top: 14px; border-radius: 50% !important; display: grid; place-items: center; --ph-bg: radial-gradient(circle at 50% 35%, #ffffff 0%, #f1ebe0 100%); box-shadow: 0 10px 30px rgba(0, 0, 0, .35), inset 0 0 0 4px #fff, inset 0 0 0 5px rgba(176, 141, 85, .45); }
-.partner-logo .ph-img { padding: 22px; }
-.partner-word { font-family: var(--serif); font-size: 15px; font-weight: 700; letter-spacing: .06em; color: var(--navy); }
-.partner-tag { margin-top: 22px; font-size: 11px; font-weight: 700; letter-spacing: .3em; color: var(--gold-2); }
-.partner h3 { margin-top: 8px; font-family: var(--serif); font-size: 32px; font-weight: 600; color: #fff; }
-.partner p:last-child { margin: 14px auto 0; max-width: 320px; font-size: 15px; line-height: 1.8; }
-
-/* ==========================================================================
    CTA
    ========================================================================== */
 .cta { position: relative; overflow: hidden; padding: clamp(80px, 9vw, 120px) 0; background: linear-gradient(115deg, #2a0f1c 0%, #6e1d38 45%, #1a1430 100%); color: rgba(255, 255, 255, .78); }
@@ -1017,7 +1001,6 @@ html.js .reveal.d3 { transition-delay: .36s; }
   .promise-inner { grid-template-columns: minmax(0, 1fr); gap: 52px; }
   .programs-head, .sec-head.split { flex-direction: column; align-items: flex-start; gap: 20px; }
   .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .partner-grid { grid-template-columns: minmax(0, 1fr); gap: 56px; }
   .about-grid { grid-template-columns: minmax(0, 1fr); }
   .about-grid > *, .about-grid > *:first-child, .about-grid > *:last-child { padding: 44px 0; border-left: 0; border-bottom: 1px solid var(--line); }
   .steps { grid-template-columns: minmax(0, 1fr); }

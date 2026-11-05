@@ -43,9 +43,6 @@
   program-english.jpg       프로그램 타일 · IELTS & TOEFL
   program-foundation.jpg    프로그램 타일 · Foundation
   program-campus.jpg        프로그램 타일 · 강남 캠퍼스
-  partner-shorelight.png    Shorelight 로고
-  partner-kaplan.png        Kaplan 로고
-  partner-ufp.png           UFP 로고
 
 [ABOUT  about.html]
   ceo.jpg                   대표 사진 (정사각형 추천)
