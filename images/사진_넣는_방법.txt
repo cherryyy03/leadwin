@@ -36,7 +36,7 @@
   main-campus-2.jpg         메인 풀스크린 배경 2
   main-campus-3.jpg         메인 풀스크린 배경 3
   main-campus-4.jpg         메인 풀스크린 배경 4
-  team-photo.jpg            '서울대 출신 대표 + 팀' 구역 배경 사진 (가로형)
+  team-photo.jpg            'Why LEADWIN' 구역 배경 사진 (가로형)
   program-us.jpg            프로그램 타일 · 미국 약대
   program-uk.jpg            프로그램 타일 · 영국 약대
   program-consulting.jpg    프로그램 타일 · 원서 컨설팅
@@ -51,23 +51,28 @@
   ceo.jpg                   대표 사진 (정사각형 추천)
   ceo-signature.png         대표 서명 (투명 배경 PNG 추천)
   pharmacy-head.jpg         약대 파트 책임자 프로필 (정사각형 추천)
+  people-ceo.jpg            Our People · 대표 (세로형)
+  people-science.jpg        Our People · 과학(생물·화학) 강사
+  people-math.jpg           Our People · 수학 강사
+  people-english.jpg        Our People · 영어 강사
   achieve-1.jpg             팀 성과 · 최근 합격
   achieve-2.jpg             팀 성과 · LEADWIN TEAM
   achieve-3.jpg             팀 성과 · 국시넷
 
 [THE PHARMACY  pharmacy.html]
-  us-elite-1.jpg            미국 ELITE · Rutgers
-  us-elite-2.jpg            미국 ELITE · Northeastern
-  us-elite-3.jpg            미국 ELITE · 추가 대학
-  us-guaranteed-1.jpg       미국 Guaranteed Pathway · MCPHS
-  us-guaranteed-2.jpg       미국 Guaranteed Pathway · 추가 대학
-  us-guaranteed-3.jpg       미국 Guaranteed Pathway · 추가 대학
-  uk-elite-1.jpg            영국 ELITE · 대학 1
-  uk-elite-2.jpg            영국 ELITE · 대학 2
-  uk-guaranteed-1.jpg       영국 Guaranteed · Pathway 1
-  uk-guaranteed-2.jpg       영국 Guaranteed · Pathway 2
-  consulting-team.jpg       컨설팅 · 국시넷 출신 (가로형)
-  result-1.jpg ~ result-4.jpg   최근 합격 (합격증 등, 세로형)
+  us-elite-1.jpg            미국 ELITE · Rutgers University
+  us-elite-2.jpg            미국 ELITE · Northeastern University
+  us-elite-3.jpg            미국 ELITE · University of Connecticut
+  us-pathway-1.jpg          미국 PATHWAY · MCPHS University
+  us-pathway-2.jpg          미국 PATHWAY · University of Illinois Chicago
+  us-pathway-3.jpg          미국 PATHWAY · University of the Pacific
+  uk-elite-1.jpg            영국 ELITE · UCL
+  uk-elite-2.jpg            영국 ELITE · King's College London
+  uk-elite-3.jpg            영국 ELITE · University of Manchester
+  uk-foundation-1.jpg       영국 FOUNDATION · University of Nottingham
+  uk-foundation-2.jpg       영국 FOUNDATION · University of Birmingham
+  uk-foundation-3.jpg       영국 FOUNDATION · University of Brighton
+  result-1.jpg ~ result-4.jpg   최근 합격 사례 (세로형)
 
 [EDUCATION  education.html]
   ielts-teacher-1.jpg       IELTS & TOEFL 강사진 #1 (세로형)
@@ -77,9 +82,9 @@
   timetable-foundation.png  Foundation 시간표 이미지 (넣으면 예시 표 대신 표시)
 
 [LEADWIN CAMPUS  campus.html]
-  campus-building.jpg       건물 사진 (세로형 추천)
-  campus-classroom.jpg      강의실
-  campus-lounge.jpg         주차장 / 라운지
+  campus-building.jpg       Campus Exterior · 외관 (세로형 추천)
+  campus-classroom.jpg      Classrooms & Learning Spaces · 강의실
+  campus-lounge.jpg         Reception & Student Facilities · 상담실/편의시설
 
 [참고]
   · 배경용 사진(메인 배경, 팀 배경, 프로그램 타일, 페이지 배너)은 글자가 잘 보이도록
