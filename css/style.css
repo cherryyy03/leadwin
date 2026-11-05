@@ -484,6 +484,13 @@ body.edit-mode .ph.is-uploaded > .ph-tools .ph-del { display: inline-flex; }
 .f-map { position: relative; height: 150px; overflow: hidden; background: #0f1524; border: 1px solid rgba(212, 180, 124, .18); }
 .f-map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; filter: grayscale(.4) contrast(1.05); }
 .f-more { display: inline-block; margin-top: 12px; font-size: 13px; font-weight: 700; color: rgba(255, 255, 255, .7); }
+.f-biz { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 56px; padding-top: 34px; padding-bottom: 34px; border-top: 1px solid rgba(255, 255, 255, .07); }
+.biz h5 { margin: 0 0 10px; font-size: 13.5px; font-weight: 700; color: rgba(255, 255, 255, .82); letter-spacing: -.01em; }
+.biz p { font-size: 12.5px; line-height: 1.9; color: rgba(255, 255, 255, .45); }
+.biz span { margin-right: 6px; color: rgba(255, 255, 255, .3); }
+.biz b { font-weight: 500; color: rgba(255, 255, 255, .55); white-space: nowrap; }
+.biz i { font-style: normal; margin: 0 10px; color: rgba(255, 255, 255, .15); }
+@media (max-width: 960px) { .f-biz { grid-template-columns: minmax(0, 1fr); } }
 .footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding-top: 26px; padding-bottom: 34px; border-top: 1px solid rgba(255, 255, 255, .07); font-size: 12.5px; color: rgba(255, 255, 255, .38); }
 .admin-link { padding: 4px 0; border: 0; background: none; font-size: 12.5px; color: rgba(255, 255, 255, .38); transition: color .2s; }
 .admin-link::before { content: "📷 "; }
