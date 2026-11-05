@@ -42,6 +42,13 @@
       a.rel = 'noopener';
     });
     $$('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
+    $$('[data-kakao]').forEach(function (a) {
+      if (CFG.kakao) { a.href = CFG.kakao; a.target = '_blank'; a.rel = 'noopener'; return; }
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        toast('카카오톡 채널 주소를 js/config.js 의 kakao 항목에 넣으면 바로 연결돼요.');
+      });
+    });
   }
 
   /* ---------- 2. 헤더 · 모바일 메뉴 ---------- */
@@ -95,15 +102,21 @@
       if (!n) return;
       var dotsBox = $('.slider-dots', box);
       var count = $('.slider-count', box);
+      var countNow = $('.slider-count-now', box);
+      var progress = $('.slider-progress', box);
+      var DELAY = 6000;
       var i = 0, timer = null, hover = false;
 
-      var dots = slides.map(function (s, k) {
+      var tabs = $$('[data-slide-tab]', box);
+      var dots = tabs.length ? tabs : slides.map(function () {
         var b = document.createElement('button');
         b.type = 'button';
-        b.setAttribute('aria-label', (k + 1) + '번째 사진 보기');
-        b.addEventListener('click', function () { go(k); start(); });
         if (dotsBox) dotsBox.appendChild(b);
         return b;
+      });
+      dots.forEach(function (b, k) {
+        if (!b.getAttribute('aria-label')) b.setAttribute('aria-label', (k + 1) + '번째 슬라이드 보기');
+        b.addEventListener('click', function () { go(k); start(); });
       });
       function go(k) {
         i = (k + n) % n;
@@ -113,18 +126,27 @@
         });
         dots.forEach(function (d, j) { d.classList.toggle('is-active', j === i); });
         if (count) count.textContent = pad(i + 1) + ' / ' + pad(n);
+        if (countNow) countNow.textContent = pad(i + 1);
       }
-      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+      function runProgress(on) {
+        if (!progress) return;
+        progress.classList.remove('run');
+        if (on) { void progress.offsetWidth; progress.classList.add('run'); }
+      }
+      function stop() { if (timer) { clearInterval(timer); timer = null; } runProgress(false); }
       function start() {
         stop();
         if (reduceMotion || hover || n < 2 || document.hidden || document.body.classList.contains('edit-mode')) return;
-        timer = setInterval(function () { go(i + 1); }, 5000);
+        runProgress(true);
+        timer = setInterval(function () { go(i + 1); runProgress(true); }, DELAY);
       }
       var prev = $('.slider-prev', box), next = $('.slider-next', box);
       if (prev) prev.addEventListener('click', function () { go(i - 1); start(); });
       if (next) next.addEventListener('click', function () { go(i + 1); start(); });
-      box.addEventListener('mouseenter', function () { hover = true; stop(); });
-      box.addEventListener('mouseleave', function () { hover = false; start(); });
+      if (!box.classList.contains('hero')) {
+        box.addEventListener('mouseenter', function () { hover = true; stop(); });
+        box.addEventListener('mouseleave', function () { hover = false; start(); });
+      }
       var x0 = null;
       box.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
       box.addEventListener('touchend', function (e) {
