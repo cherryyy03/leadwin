@@ -28,6 +28,6 @@ window.LEADWIN_CONFIG = {
   youtube:  "",                                    // 유튜브 주소 (예: "https://www.youtube.com/@xxxx")
 
   /* 기타 */
-  since:    "20XX",                                // 설립 연도 (로고 아래 SINCE)
+  since:    "",                                    // 설립 연도 (예: "2015" — 넣으면 로고 아래 SINCE 2015 표시)
   alumni:   "000"                                  // 누적 약사·의사 배출 수 (숫자만)
 };

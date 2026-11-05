@@ -1151,3 +1151,7 @@ html.js .reveal.d3 { transition-delay: .36s; }
   .edit-bar { flex-wrap: wrap; justify-content: center; padding: 14px; }
   .edit-bar p { flex-basis: 100%; text-align: center; }
 }
+
+/* 빈 사진 칸 안내 글자는 편집 모드에서만 표시 */
+.ph-label { display: none; }
+body.edit-mode .ph-label { display: inline; }
