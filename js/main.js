@@ -45,11 +45,14 @@
       a.rel = 'noopener';
     });
     $$('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
-    $$('[data-kakao]').forEach(function (a) {
-      if (CFG.kakao) { a.href = CFG.kakao; a.target = '_blank'; a.rel = 'noopener'; return; }
+    /* 카카오톡 · 블로그 · 유튜브 링크 (config.js 에 주소가 없으면 안내 메시지) */
+    var SNS_NAME = { kakao: '카카오톡 채널', blog: '블로그', youtube: '유튜브' };
+    $$('[data-kakao], [data-sns]').forEach(function (a) {
+      var key = a.hasAttribute('data-kakao') ? 'kakao' : a.getAttribute('data-sns');
+      if (CFG[key]) { a.href = CFG[key]; a.target = '_blank'; a.rel = 'noopener'; return; }
       a.addEventListener('click', function (e) {
         e.preventDefault();
-        toast('카카오톡 채널 주소를 js/config.js 의 kakao 항목에 넣으면 바로 연결돼요.');
+        toast(SNS_NAME[key] + ' 주소를 js/config.js 의 ' + key + ' 항목에 넣으면 바로 연결돼요.');
       });
     });
   }

@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&amp;display=swap">
-<link rel="stylesheet" href="css/style.css?v=20261105b">
+<link rel="stylesheet" href="css/style.css?v=20261105c">
 </head>
 <body data-page="campus">
 
@@ -144,11 +144,11 @@
         </div>
         <div class="loc-info reveal d1">
           <dl>
-            <div><dt>주소</dt><dd data-config="address">서울특별시 강남구 ○○로 ○○○</dd></div>
-            <div><dt>상담 전화</dt><dd><a href="tel:0200000000" data-tel="phone" data-config="phone">02-000-0000</a><span data-optional> · <a href="tel:01000000000" data-tel="mobile" data-config="mobile">010-0000-0000</a></span></dd></div>
-            <div><dt>운영시간</dt><dd data-config="hours">운영시간 · 방문 예약 방법 입력</dd></div>
-            <div><dt>교통편</dt><dd data-config="subway">2호선 · 신분당선 강남역 ○번 출구 도보 ○분</dd></div>
-            <div><dt>주차</dt><dd data-config="parking">건물 내 주차장 이용 가능 (방문 전 문의)</dd></div>
+            <div><dt>주소</dt><dd data-config="address">서울 서초구 서초대로 78길 34, S&amp;D빌딩 2, 3, 4층</dd></div>
+            <div><dt>지하철</dt><dd><span class="line l2">2호선</span><span class="line lsb">신분당선</span><span data-config="subway">강남역 5번 출구에서 2분 거리</span><br><small data-config="route">강남역 5번 출구 우측 도씨에빛 건물 통과</small></dd></div>
+            <div><dt>상담 전화</dt><dd><a href="tel:0260851342" data-tel="phone" data-config="phone">02-6085-1342</a></dd></div>
+            <div><dt>운영시간</dt><dd><span data-config="hours">평일 | 10:00~19:00</span><br><span data-config="holiday">주말(공휴일) | 휴무</span><br><small data-config="booking">방문시 사전 전화예약 부탁드립니다.</small></dd></div>
+            <div><dt>카카오톡</dt><dd><b data-config="kakaoId">@리드윈 글로벌 의약대</b> 친구추가</dd></div>
           </dl>
           <div class="map-buttons">
             <a href="https://map.naver.com" data-map-link="naver">네이버 지도</a>
@@ -165,6 +165,35 @@
 
 <!-- ================= 푸터 (모든 페이지 공통) ================= -->
 <footer class="site-footer">
+  <!-- ================= 강남 본원 찾아가는 방법 ================= -->
+  <div class="container visit">
+    <h3 class="visit-title">리드윈 글로벌의약대 강남 본원 찾아가는 방법</h3>
+    <div class="visit-box">
+      <div class="v-col">
+        <h4>오시는 길</h4>
+        <p class="v-addr" data-config="address">서울 서초구 서초대로 78길 34, S&amp;D빌딩 2, 3, 4층</p>
+        <p class="v-subway"><span class="v-k">지하철 |</span><span class="line l2">2호선</span><span class="line lsb">신분당선</span><span data-config="subway">강남역 5번 출구에서 2분 거리</span></p>
+        <p class="v-route" data-config="route">강남역 5번 출구 우측 도씨에빛 건물 통과</p>
+      </div>
+      <div class="v-col">
+        <h4>상담운영</h4>
+        <a class="v-phone" href="tel:0260851342" data-tel="phone" data-config="phone">02-6085-1342</a>
+        <p class="v-small" data-config="hours">평일 | 10:00~19:00</p>
+        <p class="v-small" data-config="holiday">주말(공휴일) | 휴무</p>
+        <p class="v-small" data-config="booking">방문시 사전 전화예약 부탁드립니다.</p>
+      </div>
+      <div class="v-col">
+        <h4>카카오톡 상담</h4>
+        <p class="v-kakao">카카오톡: <b data-config="kakaoId">@리드윈 글로벌 의약대</b> 친구추가</p>
+        <div class="v-sns">
+          <a href="#" data-sns="blog"><span class="sns-ic sns-blog" aria-hidden="true">blog</span><span>블로그</span></a>
+          <a href="#" data-sns="youtube"><span class="sns-ic sns-yt" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9.5 8.2v7.6L16 12z" fill="currentColor"/></svg></span><span>유튜브</span></a>
+          <a href="#" data-kakao><span class="sns-ic sns-ch" aria-hidden="true">Ch</span><span>카카오채널</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="container footer-grid">
     <div class="f-brand">
       <span class="ph ph-bare logo-slot" data-photo="logo" data-fit="natural" data-label="리드윈 로고">
@@ -187,15 +216,6 @@
       </ul>
     </div>
 
-    <div class="f-col">
-      <h4>Contact</h4>
-      <ul class="f-contact">
-        <li data-optional><span class="k">T</span><a href="tel:01000000000" data-tel="mobile" data-config="mobile">010-0000-0000</a></li>
-        <li><span class="k">T</span><a href="tel:0200000000" data-tel="phone" data-config="phone">02-000-0000</a></li>
-        <li><span class="k">E</span><a href="#" data-mailto data-config="email">○○○○@gmail.com</a></li>
-      </ul>
-      <p class="f-addr" data-config="address">서울특별시 강남구 ○○로 ○○○</p>
-    </div>
 
     <div class="f-col">
       <h4>약도 / Map</h4>
@@ -239,7 +259,7 @@
   <a href="#" data-kakao><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 4C7 4 3 7.1 3 11c0 2.5 1.7 4.7 4.2 5.9l-.9 3.3c-.1.3.3.6.6.4l3.9-2.6c.4 0 .8.1 1.2.1 5 0 9-3.1 9-7S17 4 12 4z"/></svg><span>카카오톡 상담</span></a>
 </nav>
 
-<script src="js/config.js?v=20261105b"></script>
-<script src="js/main.js?v=20261105b"></script>
+<script src="js/config.js?v=20261105c"></script>
+<script src="js/main.js?v=20261105c"></script>
 </body>
 </html>

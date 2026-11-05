@@ -468,7 +468,7 @@ body.edit-mode .ph.is-uploaded > .ph-tools .ph-del { display: inline-flex; }
    Footer
    ========================================================================== */
 .site-footer { background: #05080f; color: rgba(255, 255, 255, .5); padding: 90px 0 0; font-size: 14.5px; }
-.footer-grid { display: grid; grid-template-columns: 1.35fr .8fr 1fr 1.2fr; gap: 48px; padding-bottom: 64px; }
+.footer-grid { display: grid; grid-template-columns: 1.4fr .8fr 1.3fr; gap: 48px; padding-top: 56px; padding-bottom: 56px; border-top: 1px solid rgba(255, 255, 255, .07); }
 .site-footer h4 { margin-bottom: 20px; font-size: 11.5px; font-weight: 700; letter-spacing: .26em; text-transform: uppercase; color: var(--gold-2); }
 .f-slogan { margin-top: 24px; font-size: 16px; line-height: 1.75; color: rgba(255, 255, 255, .78); }
 .f-partners { margin-top: 18px; font-size: 13.5px; }
@@ -484,6 +484,44 @@ body.edit-mode .ph.is-uploaded > .ph-tools .ph-del { display: inline-flex; }
 .f-map { position: relative; height: 150px; overflow: hidden; background: #0f1524; border: 1px solid rgba(212, 180, 124, .18); }
 .f-map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; filter: grayscale(.4) contrast(1.05); }
 .f-more { display: inline-block; margin-top: 12px; font-size: 13px; font-weight: 700; color: rgba(255, 255, 255, .7); }
+/* ---------- 강남 본원 찾아가는 방법 ---------- */
+.visit { padding-bottom: 72px; }
+.visit-title { text-align: center; font-size: clamp(22px, 2.3vw, 30px); font-weight: 800; letter-spacing: -.04em; color: #fff; }
+.visit-box {
+  margin-top: 32px; display: grid; grid-template-columns: 1.25fr 1fr 1fr;
+  padding: 36px 0; border-radius: 22px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, .07), rgba(255, 255, 255, .035));
+  border: 1px solid rgba(255, 255, 255, .1);
+}
+.v-col { padding: 0 44px; }
+.v-col + .v-col { border-left: 1px solid rgba(255, 255, 255, .14); }
+.v-col h4 { margin: 0 0 16px; font-size: 21px; font-weight: 800; letter-spacing: -.03em; color: #fff; text-transform: none; }
+.v-addr, .v-route { font-size: 15.5px; font-weight: 600; color: rgba(255, 255, 255, .78); line-height: 1.7; }
+.v-subway { margin: 12px 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font-size: 15.5px; font-weight: 600; color: rgba(255, 255, 255, .78); }
+.v-k { margin-right: 2px; }
+.line { display: inline-flex; align-items: center; height: 28px; padding: 0 12px; border-radius: 999px; font-size: 13.5px; font-weight: 800; color: #fff; }
+.line.l2 { background: #2f9e44; }
+.line.lsb { background: #c4253c; }
+.v-phone { display: inline-block; margin-bottom: 10px; font-size: clamp(26px, 2.4vw, 34px); font-weight: 800; letter-spacing: -.01em; color: #f6c445; font-variant-numeric: tabular-nums; }
+.v-phone:hover { color: #ffd76a; }
+.v-small { font-size: 14.5px; line-height: 1.8; color: rgba(255, 255, 255, .7); }
+.v-kakao { font-size: 15.5px; font-weight: 600; color: rgba(255, 255, 255, .78); }
+.v-kakao b { color: #f6c445; font-weight: 800; }
+.v-sns { margin-top: 18px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.v-sns a { display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 14.5px; font-weight: 700; color: rgba(255, 255, 255, .82); transition: transform .25s var(--ease), color .2s; }
+.v-sns a:hover { transform: translateY(-3px); color: #fff; }
+.sns-ic { display: grid; place-items: center; width: 50px; height: 50px; border-radius: 12px; font-weight: 900; box-shadow: 0 6px 16px rgba(0, 0, 0, .25); }
+.sns-blog { background: #fff; color: #03c75a; font-size: 14px; letter-spacing: -.02em; border: 3px solid #03c75a; }
+.sns-yt { background: #ff0000; color: #fff; }
+.sns-yt svg { width: 26px; height: 26px; }
+.sns-ch { background: #fee500; color: #3a1d1d; font-size: 18px; }
+.loc-info dd .line { height: 24px; padding: 0 10px; font-size: 12px; margin-right: 6px; }
+.loc-info dd small { font-size: 13.5px; font-weight: 500; color: var(--muted); }
+@media (max-width: 960px) {
+  .visit-box { grid-template-columns: minmax(0, 1fr); padding: 8px 0; }
+  .v-col { padding: 28px 28px; }
+  .v-col + .v-col { border-left: 0; border-top: 1px solid rgba(255, 255, 255, .12); }
+}
 .f-biz { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 56px; padding-top: 34px; padding-bottom: 34px; border-top: 1px solid rgba(255, 255, 255, .07); }
 .biz h5 { margin: 0 0 10px; font-size: 13.5px; font-weight: 700; color: rgba(255, 255, 255, .82); letter-spacing: -.01em; }
 .biz p { font-size: 12.5px; line-height: 1.9; color: rgba(255, 255, 255, .45); }
