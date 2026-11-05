@@ -18,8 +18,11 @@
   /* ---------- 1. 기본 정보 (js/config.js) ---------- */
   function applyConfig() {
     $$('[data-config]').forEach(function (el) {
-      var v = CFG[el.getAttribute('data-config')];
-      if (v != null && String(v).trim() !== '') el.textContent = v;
+      var key = el.getAttribute('data-config');
+      var v = CFG[key];
+      if (v != null && String(v).trim() !== '') { el.textContent = v; return; }
+      /* config.js 에서 일부러 비워 둔 항목("")은 화면에서 숨김 */
+      if (v === '') { var box = el.closest('[data-optional]'); if (box) box.hidden = true; }
     });
     $$('[data-tel]').forEach(function (a) {
       var v = CFG[a.getAttribute('data-tel')] || CFG.phone || '';
