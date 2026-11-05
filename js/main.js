@@ -559,6 +559,35 @@
     toastTimer = setTimeout(function () { toastEl.classList.remove('show'); }, 3200);
   }
 
+
+  /* ---------- 숫자 카운트업 (화면에 보일 때 0부터 올라감) ---------- */
+  function initCounters() {
+    var els = $$('[data-count]');
+    if (!els.length) return;
+    function run(el) {
+      var target = parseFloat(el.getAttribute('data-count'));
+      var dec = parseInt(el.getAttribute('data-decimals') || '0', 10);
+      if (reduceMotion || isNaN(target)) { el.textContent = target.toFixed(dec); return; }
+      var t0 = null, dur = 1600;
+      function step(t) {
+        if (!t0) t0 = t;
+        var p = Math.min(1, (t - t0) / dur);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = (target * eased).toFixed(dec);
+        if (p < 1) window.requestAnimationFrame(step);
+      }
+      el.textContent = (0).toFixed(dec);
+      window.requestAnimationFrame(step);
+    }
+    if (!('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { run(en.target); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.4 });
+    els.forEach(function (el) { io.observe(el); });
+  }
+
   /* ---------- 시작 ---------- */
   function init() {
     safe(applyConfig);
@@ -567,6 +596,7 @@
     safe(initPhotos);
     safe(initSliders);
     safe(initReveal);
+    safe(initCounters);
   }
   document.documentElement.classList.add('js');
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
